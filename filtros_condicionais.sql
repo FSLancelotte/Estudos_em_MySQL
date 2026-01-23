@@ -92,3 +92,41 @@ WHERE nullif(trim(info_adicionais), '') IS NULL;
 SELECT * FROM cliente
 WHERE nullif(info_adicionais, ' ') IS NULL;
 
+
+-- IF e CASE
+
+SELECT * FROM cliente;
+
+SELECT nome, IF(limite_credito > 6000, 'Alto', 'Baixo') AS categoria_limite FROM cliente;
+
+SELECT
+	nome,
+    CASE
+		WHEN limite_credito > 6000 THEN 'Alto'
+        ELSE 'Baixo'
+	END AS categoria_limite
+FROM cliente;
+
+SELECT id_cliente, nome, limite_credito,
+	IF (limite_credito > 9000, 'Premium', 
+	IF(limite_credito BETWEEN 5000 AND 9000, 'Gold',
+		'Silver')) AS categoria_limite
+FROM cliente;
+
+SELECT id_cliente, nome, limite_credito,
+	CASE
+		WHEN limite_credito > 9000 THEN 'Premium'
+        WHEN limite_credito BETWEEN 5000 AND 9000 THEN 'Gold'
+        ELSE 'Silver'
+	END AS categoria_cliente
+FROM cliente;
+
+SELECT id_cliente, nome, limite_credito,
+	CASE
+		WHEN limite_credito > 9000 THEN 'Premium'
+        WHEN limite_credito BETWEEN 5000 AND 9000 THEN 'Gold'
+        ELSE 'Silver'
+	END AS categoria_cliente
+FROM cliente;
+
+SELECT * FROM cliente;

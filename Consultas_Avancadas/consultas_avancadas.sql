@@ -94,7 +94,6 @@ BEGIN
     RETURN avaliacao;
 END //
 DELIMITER ;
-DROP FUNCTION mediaPedido;
 
 SELECT mediaPedido(5);
 SELECT mediaPedido(6);

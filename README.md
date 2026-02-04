@@ -5,7 +5,7 @@ Os módulos contidos aqui foram feitos utilizando MySQL Workbench.
 
 Os módulos são organizados numericamente pela ordem vista no curso e o conteúdo é agregado
 de um módulo para outro. Ou seja, um módulo avançado pode utilizar de conteúdos vistos
-ou etapas executadas em um módulo anterior. 
+ou de etapas executadas em um módulo anterior. 
 
 # Módulos
 ## Linguagem de Definição de Dados (DDL)
